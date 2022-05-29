@@ -1,0 +1,77 @@
+<div class="b">
+<form [formGroup]="MyRecipe"(ngSubmit)="add()" >
+<div class="sc">
+    <input type="submit" placeholder="הוסף"  />
+</div>
+<div class="container"> 
+<div class="row">
+
+ <div class="form-group">
+     <label class="text-uppercase"> קוד מתכון </label>
+     <input type="text" class="inputs" formControlName="CodeR" [class.error-red]="MyRecipe.controls['CodeR'].touched&&MyRecipe.controls['CodeR'].errors" />
+     <div  class="if"*ngIf="MyRecipe.controls['CodeR'].touched&&MyRecipe.controls['CodeR'].errors"> ערך לא תקין </div>
+     </div> 
+
+     <div class="form-group">
+        <label class="text-uppercase"> שם מתכון </label>
+        <input type="text"class="inputs" formControlName="NameR" [class.error-red]="MyRecipe.controls['NameR'].touched&&MyRecipe.controls['NameR'].errors" />
+        <div class="if"*ngIf="MyRecipe.controls['NameR'].touched&&MyRecipe.controls['NameR'].errors"> ערך לא תקין </div>
+        </div> 
+      
+        <div class="form-group">     
+            <label class="text-uppercase">  קטגוריה </label>
+           <select class="inputs" formControlName="CodeC" >
+            <option *ngFor="let c of  ArrC">
+                     {{c.NameC}}
+           </option>
+        </select>
+        </div>
+
+        <div class="form-group">
+        <label class="text-uppercase"> זמן הכנה  </label>
+        <input type="text"class="inputs" formControlName="Time" [class.error-red]="MyRecipe.controls['Time'].touched&&MyRecipe.controls['Time'].errors" />
+        <div class="if"*ngIf="MyRecipe.controls['Time'].touched&&MyRecipe.controls['Time'].errors">ערך לא תקין</div>
+        </div> 
+        
+    <div class="form-group">
+        <label class="text-uppercase"> דרגת קושי  </label>
+        <input type="text"class="inputs" formControlName="Darga" [class.error-red]="MyRecipe.controls['Darga'].touched&&MyRecipe.controls['Darga'].errors" />
+        <div class="if"*ngIf="MyRecipe.controls['Darga'].touched&&MyRecipe.controls['Darga'].errors">ערך לא תקין</div>
+        </div> 
+        
+        <div class="form-group">
+        <label class="text-uppercase"> תאריך הוספה </label>
+        <input type="date"class="inputs" formControlName="DataAdd" [class.error-red]="MyRecipe.controls['DataAdd'].touched&&MyRecipe.controls['DataAdd'].errors" />
+        <div class="if" *ngIf="MyRecipe.controls['DataAdd'].touched&&MyRecipe.controls['DataAdd'].errors"> ערך לא תקין</div>
+        </div> 
+        
+
+        <div class="form-group">
+        <label class="text-uppercase">  קוד משתמש  </label>
+        <input type="text"class="inputs" formControlName="CodeU" [class.error-red]="MyRecipe.controls['CodeU'].touched&&MyRecipe.controls['CodeU'].errors" />      
+        <div class="if"*ngIf="MyRecipe.controls['CodeU'].touched&&MyRecipe.controls['CodeU'].errors"> ערך לא תקין</div>
+        </div> 
+
+    </div></div>
+<!-- [disabled]="!MyRecipe.valid"  -->       
+</form>
+
+<div class="left">
+
+<div class="form-group">
+
+    <label class="text-uppercase"> הורואות הכנה</label>
+<div *ngFor="let x of arrL ,let i=index,trackBy:trackByidx">
+<input type="text" class="inputs1" [(ngModel)]="arrL[i]" name={{i}} (blur)="updateList()" placeholder="הכנס הוראה ">
+</div>
+</div>
+
+<div class="form-group">
+<label class="text-uppercase">מצרכים</label>
+<div *ngFor="let x of arrP ,let i=index,trackBy:trackByidx">
+    <input type="text"class="inputs1"  [(ngModel)]="arrP[i]" name={{i}} (blur)="updatePre()" placeholder="  הכנס רכיב ">
+    </div>
+</div>
+
+    </div>
+</div>

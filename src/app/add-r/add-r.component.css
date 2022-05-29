@@ -1,0 +1,109 @@
+/* .b{
+    background-image: url("../../assets/כף.jpg");
+    background-position: 50% 50%;
+    height: 48.5em;background-size: cover;width: auto;
+    direction: rtl;
+ }  */
+ .b{
+ 
+background-image: url("../../assets/כף.jpg");
+    
+background-repeat: no-repeat;
+
+background-position: right top;
+
+background-attachment:fixed;
+
+background-size: cover; 
+
+height: 896px;
+width: 100%;
+direction: rtl;
+
+font-size: 23px;
+display: flex;
+color: black;
+
+ } 
+ .save{
+    background-color:rgb(75, 75, 75);
+    font-size: 24px;
+width: 120px;
+color:black;
+font-weight: 400;
+     margin-bottom: 20px;
+     font-family: GVERETLEVINALEFALEFALEF-REGULAR;
+
+ }
+ .cancel{
+    background-color:rgb(75, 75, 75);
+    font-size: 24px;
+width: 120px;
+color:black;
+font-weight: 400;
+     margin-bottom: 20px;
+
+ }
+ .sc{
+     display: flex;
+     float:inline-end;
+     padding: 20px;
+     font-family: GVERETLEVINALEFALEFALEF-REGULAR;
+margin-top: 50px;
+margin-left: 330px;
+ }
+ .row{
+     margin-left: 400px;
+     /* margin-top: 10px; */
+     float: inline-end;
+ }
+.inputs{
+    width: 250px;
+    height: 40px;
+    font-family: GVERETLEVINALEFALEFALEF-REGULAR;
+margin-bottom: 2px;
+ border-radius: 5px;
+background-color:rgba(255, 255, 255, 0.877) ;
+}
+.inputs1{
+    width: 770px;
+    height: 40px;
+ border-radius: 5px;
+background-color:rgba(255, 255, 255, 0.877) ;
+}
+.left{
+  /* margin-top: 10px;
+    margin-left: 700px;
+    font-family: GVERETLEVINALEFALEFALEF-REGULAR;
+  
+   float: left; 
+   font-size: 22px; */
+
+   margin-top: 10px;
+   margin-left: 700px;
+   font-family: GVERETLEVINALEFALEFALEF-REGULAR;
+  /* margin-right: 1100px;
+  margin-top: 100px;*/
+  float: left; 
+  font-size: 22px;
+
+}
+.form-group{
+margin-top: 30px;
+    width: 150px;
+   
+}
+.banner-sec{background:url(https://static.pexels.com/photos/33972/pexels-photo.jpg)  no-repeat left bottom; background-size:cover; min-height:500px; border-radius: 0 10px 10px 0; padding:0;}
+.container{
+    background:rgba(255, 255, 255, 0);
+     border-radius: 10px; 
+     box-shadow:15px 20px 0px rgba(0, 0, 0, 0);
+    width: 500px;
+    height: 600px;
+    margin-right: 400px;
+   margin-top: 10px;
+}
+.text-uppercase{
+    /* direction: ltr; */
+    font-size: 25px;
+  } 

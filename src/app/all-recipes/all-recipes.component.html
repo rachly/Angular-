@@ -1,0 +1,35 @@
+
+    <div class="ch">
+      <div class="filter2">
+        <div class="filter">
+
+          <div >
+            <select class="filter1" [(ngModel)]="codeC" (click)="f()">
+              <option value=0>הצג הכל</option>
+              <option value={{c.CodeC}} *ngFor="let c of listcatgury">{{c.NameC}}</option>  
+            </select>
+          </div>
+
+          <div>
+            <input  class="filter1"type="number"placeholder="חפש לי זמן הכנה"id="myInput" [(ngModel)]="time"   (keyup)="f()">
+          </div>
+          
+             
+    <div>
+      <input type="text" class="filter1" placeholder=" מתכון חפש לפי שם"id="myInput" [(ngModel)]="name"(keyup)="f()">     
+    </div>
+ 
+ 
+
+</div></div>
+<input type="button" value="הוספת מתכון" id="add"   (click)="add()">
+</div>
+<body class="bodyall">
+<app-detiles-r *ngFor="let x of  filterList" [MyRecipe]=x  ></app-detiles-r>
+
+</body>
+
+
+
+
+
